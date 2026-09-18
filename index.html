@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Husnain · KI- und Python-Backend-Entwickler</title>
+<meta name="description" content="Ali Husnain: AI and Python backend developer. LLM apps, RAG systems, n8n automation, FastAPI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F8;--ink:#1B2431;--mute:#5B6774;--line:#D8DEE6;--accent:#1F5F8B;--surface:#FFFFFF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.brand{font-weight:800;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.lang button{border:0;background:none;padding:6px 14px;font:inherit;font-weight:700;cursor:pointer;color:var(--mute)}
+.lang button[aria-pressed=true]{background:var(--ink);color:#fff}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.hero{padding:40px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:0 0 18px}
+.lead{font-size:19px;color:var(--mute);margin:0 0 26px;max-width:38ch}
+.cta{display:inline-flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.pipe{width:100%;height:auto}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:14px;font-weight:700;color:var(--mute);margin:0 0 28px;letter-spacing:.02em}
+.project{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--line)}
+.project:last-child{border-bottom:1px solid var(--line)}
+.project h3{margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.01em}
+.project .stack{color:var(--mute);font-size:15px}
+.project p{margin:0;font-size:16px}
+.project .k{display:block;font-weight:700;font-size:13px;color:var(--accent);margin-bottom:4px}
+.skills{display:grid;grid-template-columns:180px 1fr;row-gap:14px;column-gap:20px}
+.skills b{font-weight:700}
+.skills span{color:var(--mute)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px}
+footer{padding:36px 0 56px;color:var(--mute);font-size:15px}
+footer a{margin-right:20px}
+[data-en]{display:none}
+html[data-lang=en] [data-en]{display:revert}
+html[data-lang=en] [data-de]{display:none}
+@media(max-width:800px){.hero,.project,.about{grid-template-columns:1fr}.hero{gap:28px}.skills{grid-template-columns:1fr;row-gap:6px}.skills b{margin-top:10px}}
+@media(prefers-reduced-motion:no-preference){.dot{animation:flow 2.6s linear infinite}@keyframes flow{to{stroke-dashoffset:-48}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="#">Ali Husnain</a>
+  <div class="lang" role="group" aria-label="Sprache / Language">
+    <button id="de" aria-pressed="true" onclick="setLang('de')">DE</button>
+    <button id="en" aria-pressed="false" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div>
+    <h1 data-de>Ich baue KI-Anwendungen, die im Alltag eines Unternehmens laufen.</h1>
+    <h1 data-en>I build AI applications that run in a company's daily work.</h1>
+    <p class="lead" data-de>Python- und KI-Backend-Entwickler. LLM-Apps, RAG-Systeme, n8n-Automatisierung und REST-APIs mit FastAPI und Docker. Auf der Suche nach einer Stelle in Deutschland.</p>
+    <p class="lead" data-en>Python and AI backend developer. LLM apps, RAG systems, n8n automation and REST APIs with FastAPI and Docker. Looking for a role in Germany.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projekte" data-de>Projekte ansehen</a>
+      <a class="btn primary" href="#projekte" data-en>See projects</a>
+      <a class="btn" href="Lebenslauf_Ali_Husnain.pdf" data-de>Lebenslauf (PDF)</a>
+      <a class="btn" href="Lebenslauf_Ali_Husnain.pdf" data-en>CV (PDF)</a>
+    </div>
+  </div>
+  <svg class="pipe" viewBox="0 0 400 300" role="img" aria-label="Pipeline: documents to chunks to embeddings to Neo4j and Pinecone to answer">
+    <defs><marker id="m" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6z" fill="#1F5F8B"/></marker></defs>
+    <g font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#1B2431">
+      <rect x="20" y="30" width="110" height="44" rx="8" fill="#fff" stroke="#D8DEE6"/><text x="75" y="57" text-anchor="middle">Dokumente</text>
+      <rect x="20" y="128" width="110" height="44" rx="8" fill="#fff" stroke="#D8DEE6"/><text x="75" y="155" text-anchor="middle">Chunking</text>
+      <rect x="20" y="226" width="110" height="44" rx="8" fill="#fff" stroke="#D8DEE6"/><text x="75" y="253" text-anchor="middle">Embeddings</text>
+      <rect x="215" y="80" width="110" height="44" rx="8" fill="#fff" stroke="#D8DEE6"/><text x="270" y="107" text-anchor="middle">Neo4j Graph</text>
+      <rect x="215" y="176" width="110" height="44" rx="8" fill="#fff" stroke="#D8DEE6"/><text x="270" y="203" text-anchor="middle">Pinecone</text>
+      <rect x="290" y="30" width="90" height="34" rx="17" fill="#1F5F8B"/><text x="335" y="52" text-anchor="middle" fill="#fff">Antwort</text>
+    </g>
+    <g fill="none" stroke="#1F5F8B" stroke-width="2" marker-end="url(#m)">
+      <path d="M75 74V126"/><path d="M75 172V224"/>
+      <path class="dot" stroke-dasharray="6 6" d="M130 150 C170 150 175 102 213 102"/>
+      <path class="dot" stroke-dasharray="6 6" d="M130 248 C170 248 175 198 213 198"/>
+      <path class="dot" stroke-dasharray="6 6" d="M325 102 C345 102 335 80 335 66"/>
+      <path class="dot" stroke-dasharray="6 6" d="M325 198 C365 198 372 110 340 66"/>
+    </g>
+  </svg>
+</div>
+
+<section id="projekte">
+  <h2 data-de>Projekte</h2><h2 data-en>Projects</h2>
+
+  <article class="project">
+    <div><h3 data-de>Wissensgraph-Chatbot</h3><h3 data-en>Knowledge-graph chatbot</h3>
+      <div class="stack">Python, LangChain, OpenAI API, Neo4j, Pinecone, Cypher</div></div>
+    <div><span class="k" data-de>Problem</span><span class="k" data-en>Problem</span>
+      <p data-de>Dokumentation und Kundendaten lagen verstreut in Dateien und Webquellen. Reine Vektorsuche verlor die Beziehungen zwischen Personen, Produkten und Ereignissen.</p>
+      <p data-en>Documentation and customer data were spread across files and web sources. Plain vector search lost the relationships between people, products and events.</p></div>
+    <div><span class="k" data-de>Ergebnis</span><span class="k" data-en>Result</span>
+      <p data-de>Chatbot, der Dateien einliest, per OpenAI Entitäten extrahiert, daraus einen Graphen in Neo4j baut und Fragen über Cypher, Vektorsuche oder Websuche beantwortet. Für einen Kunden im Einsatz.</p>
+      <p data-en>Chatbot that ingests files, extracts entities with OpenAI, builds a graph in Neo4j and answers via Cypher, vector search or web search fallback. In use for a client.</p></div>
+  </article>
+
+  <article class="project">
+    <div><h3 data-de>CRM-Automatisierung mit n8n</h3><h3 data-en>CRM automation with n8n</h3>
+      <div class="stack">n8n, OpenAI, Gemini, Sender.net, Monday.com, Workiz, Vonage, OCR</div></div>
+    <div><span class="k">Problem</span>
+      <p data-de>Ein Servicebetrieb erledigte Newsletter, Lead-Erfassung und Anrufbearbeitung von Hand.</p>
+      <p data-en>A service business handled newsletters, lead capture and call handling manually.</p></div>
+    <div><span class="k" data-de>Ergebnis</span><span class="k" data-en>Result</span>
+      <p data-de>Automatische Newsletter, OCR-Lead-Erfassung aus Telegram-Bildern und ein Vonage-Anrufagent, der Aufträge in Workiz anlegt, Techniker zuweist und Rechnungen sowie Zahlungen verfolgt.</p>
+      <p data-en>Automatic newsletters, OCR lead capture from Telegram images and a Vonage call agent that creates jobs in Workiz, assigns technicians and tracks invoices and payments.</p></div>
+  </article>
+
+  <article class="project">
+    <div><h3 data-de>ML-Modelle als REST-API</h3><h3 data-en>ML models as a REST API</h3>
+      <div class="stack">Scikit-learn, Pandas, FastAPI, Docker</div></div>
+    <div><span class="k">Problem</span>
+      <p data-de>Trainierte Klassifikations- und Regressionsmodelle mussten für andere Systeme zuverlässig erreichbar sein.</p>
+      <p data-en>Trained classification and regression models had to be reliably reachable by other systems.</p></div>
+    <div><span class="k" data-de>Ergebnis</span><span class="k" data-en>Result</span>
+      <p data-de>Modelle als FastAPI-Service mit Validierung, Health-Check und Anomalieerkennung, in Docker verpackt und produktiv im Einsatz.</p>
+      <p data-en>Models served as a FastAPI service with validation, health check and anomaly detection, packaged in Docker and running in production.</p></div>
+  </article>
+
+  <p style="margin-top:22px"><a href="https://github.com/ali-hsn-dev/document-qa-demo" data-de>Demo: Dokumenten-Q&amp;A (Gradio-App, Quellcode auf GitHub)</a><a href="https://github.com/ali-hsn-dev/document-qa-demo" data-en>Demo: Document Q&amp;A (Gradio app, source on GitHub)</a></p>
+</section>
+
+<section>
+  <h2 data-de>Technische Kenntnisse</h2><h2 data-en>Skills</h2>
+  <div class="skills">
+    <b>KI / LLM</b><span>LangChain, LangGraph, RAG, Graph RAG, MCP Server, Prompt Engineering, OpenAI API, Gemini API</span>
+    <b>Machine Learning</b><span>Scikit-learn, NumPy, Pandas, Klassifikation, Regression, Anomalieerkennung</span>
+    <b>Backend</b><span>Python, FastAPI, Flask, Django, REST APIs, PostgreSQL, SQL</span>
+    <b data-de>Datenbanken</b><b data-en>Databases</b><span>PostgreSQL, Neo4j (Cypher), Pinecone</span>
+    <b data-de>Automatisierung</b><b data-en>Automation</b><span>n8n, Workiz, Monday.com, GoHighLevel, Vonage, Sender.net, JSON-RPC, OCR</span>
+    <b>DevOps</b><span>Docker, Linux-Serveradministration, Bash</span>
+  </div>
+</section>
+
+<section>
+  <h2 data-de>Über mich</h2><h2 data-en>About</h2>
+  <div class="about">
+    <div>
+      <p data-de>Seit Anfang 2024 arbeite ich als Entwickler, zuerst in der Linux-Administration, dann im Machine Learning und aktuell als Generative-AI-Entwickler bei Savvy Programmer.</p>
+      <p data-en>I have worked as a developer since early 2024, first in Linux administration, then in machine learning and currently as a generative AI developer at Savvy Programmer.</p>
+      <p data-de>Mein Ziel ist eine Stelle als KI- oder Python-Backend-Entwickler in Deutschland, in der ich meine Erfahrung einbringe und mich fachlich weiterentwickle.</p>
+      <p data-en>My goal is a role as an AI or Python backend developer in Germany where I can contribute my experience and keep growing professionally.</p>
+    </div>
+    <div>
+      <p data-de><strong>Deutsch:</strong> B1, derzeit im Kurs mit Ziel B2<br><strong>Englisch:</strong> B2<br><strong>Urdu:</strong> Muttersprache</p>
+      <p data-en><strong>German:</strong> B1, currently in a course working toward B2<br><strong>English:</strong> B2<br><strong>Urdu:</strong> native</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="mailto:husnainawan3245@gmail.com">husnainawan3245@gmail.com</a>
+  <a href="https://linkedin.com/in/ali-husnian01">LinkedIn</a>
+  <a href="https://github.com/ali-hsn-dev">GitHub</a>
+</footer>
+</div>
+<script>
+function setLang(l){document.documentElement.dataset.lang=l;document.documentElement.lang=l;document.getElementById('de').setAttribute('aria-pressed',l==='de');document.getElementById('en').setAttribute('aria-pressed',l==='en');}
+</script>
+</body>
+</html>
